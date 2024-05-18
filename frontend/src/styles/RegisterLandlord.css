@@ -1,0 +1,58 @@
+.register-landlord{
+    position: relative;
+    border-radius: 5px;
+    color: white;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 67vh;
+    background: linear-gradient(#ff0081,#6827b0);
+}
+.register-landlord-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    margin-top: 40px;
+}
+.register-landlord input{
+    height: 30px;
+    width: 80%;
+    border: none;
+    border-radius: 1.6px;
+    margin-bottom: 10px;
+    outline: none;
+}
+.register-landlord label{
+    width: 80%;
+}
+.register-landlord-title{
+    position: absolute;
+    justify-content: center;
+    display: flex;
+    margin-top: 0px;
+    font-weight: bold;
+    top: 10px;
+}
+.register-landlord button{
+    padding: 6px;
+    position: absolute;
+    bottom: 20px;
+}
+.register-landlord button:hover{
+    cursor: pointer;
+}
+.form-right,.form-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.form-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

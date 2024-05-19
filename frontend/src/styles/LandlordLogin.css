@@ -1,0 +1,22 @@
+form{
+    color: white;
+    border-radius: 3px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(#ff0081,#6827b0);
+}
+form input{
+    height: 30px;
+    width: 90%;
+    border: none;
+    border-radius: 1.6px;
+    margin-bottom: 10px;
+    outline: none;
+}
+form label{
+    width: 80%;
+}

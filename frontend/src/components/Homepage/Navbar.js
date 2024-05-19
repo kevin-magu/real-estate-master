@@ -11,6 +11,7 @@ function Navbar() {
                 <Link to="/landlord"><li>Landlord</li></Link>
                 <li>Account</li>
                 <li>About</li>
+                <Link to="/registerlandlord"><li>Landlord Register</li></Link>
             </ul>
         </nav>
     </div>

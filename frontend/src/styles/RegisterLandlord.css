@@ -38,7 +38,7 @@
 .register-landlord button{
     padding: 6px;
     position: absolute;
-    bottom: 20px;
+    bottom: 30px;
 }
 .register-landlord button:hover{
     cursor: pointer;
@@ -55,4 +55,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.already-have-an-account{
+    position: absolute;
+    bottom: 10px;
+    font-size: 14px;
+    width: 100%;
 }

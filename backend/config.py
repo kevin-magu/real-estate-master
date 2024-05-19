@@ -1,8 +1,8 @@
 from flask import Flask
 from flask_mysqldb import MySQL
 from flask_cors import CORS
-app = Flask(__name__)
 
+app = Flask(__name__)
 CORS(app)
 
 #configure the database

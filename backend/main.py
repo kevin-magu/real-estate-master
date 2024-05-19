@@ -1,7 +1,8 @@
 from flask import request, jsonify
 from config import app, mysql
+from flask_cors import CORS
 
-@app.route("/create_lanlord", methods=["POST"])
+@app.route("/create_landlord", methods=["POST"])
 def create_landlord():
     name = request.json.get("name")
     password = request.json.get("password")
@@ -16,7 +17,12 @@ def create_landlord():
     vat_no= request.json.get("vatNo")
 
     cur = mysql.connection.cursor()
-    cur.execute("INSERT INTO landlords(name,password,address,gender,phone,email,remarks,city,account_no,bank_name,vat_no) VALUES (%s,%s,%s)", (name,password,address,gender,phone,email,remarks,city,account_no,bank_name,vat_no))
+    cur.execute("INSERT INTO landlords(name,password,address,gender,phone,email,remarks,city,account_no,bank_name,vat_no) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", (name,password,address,gender,phone,email,remarks,city,account_no,bank_name,vat_no))
     mysql.connection.commit()
     cur.close()
-    return jsonify({"message":"Landlord created"}), 201
+    return jsonify({"message":"Landlord created"}), 200
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
+

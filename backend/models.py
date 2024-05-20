@@ -7,3 +7,7 @@ class User:
         cur.execute("INSERT INTO landlords(name,password,address,gender,phone,email,remarks,city,account_no,bank_name,vat_no) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", (name,password,address,gender,phone,email,remarks,city,account_no,bank_name,vat_no))
         mysql.connection.commit()
         cur.close()
+
+    def verify_password(self, password):
+        return self.password == password
+        

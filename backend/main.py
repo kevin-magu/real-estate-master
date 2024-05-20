@@ -1,6 +1,8 @@
-from flask import request, jsonify
+from flask import request, jsonify, session
 from config import app, mysql
 from flask_cors import CORS
+from models import User
+from flask_login import LoginManager, login_user, logout_user,login_required, current_user
 
 @app.route("/create_landlord", methods=["POST"])
 def create_landlord():
@@ -21,6 +23,22 @@ def create_landlord():
     mysql.connection.commit()
     cur.close()
     return jsonify({"message":"Landlord created"}), 200
+
+@app.route('/login', methods=['POST'])
+def login():
+    email = request.json.get('email')
+    password = request.json.get('password')
+
+    if not email or not password:
+        return jsonify({"message":"must include email and"})
+    
+    user=User.get_user_by_email(email)
+    if user and user.verify_password(password):
+        login_user(user)
+        return jsonify({"message":"login successiful"}), 200
+    else:
+        return jsonify({"message":"ivalid email or password"}), 401
+
 
 
 if __name__ == "__main__":

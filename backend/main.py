@@ -36,13 +36,13 @@ def login():
     password = request.json.get('password')
 
     if not email or not password:
-        return jsonify({"message":"must include email and"})
+        return jsonify({"message": "Must include email and password"}), 400
     
-    user=User.get_user_by_email(email)
-    if user and User.verify_password(user['password'],  password):
-        return jsonify({"message":"login successiful"}), 200
+    user = User.get_user_by_email(email)
+    if user and User.verify_password(user['password'], password):
+        return jsonify({"message": "Login successful"}), 200
     else:
-        return jsonify({"message":"ivalid email or password"}), 401
+        return jsonify({"message": "Invalid email or password"}), 401
 
 
 

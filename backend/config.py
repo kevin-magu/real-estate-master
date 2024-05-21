@@ -2,6 +2,7 @@ from flask import Flask
 from flask_mysqldb import MySQL
 from flask_cors import CORS
 from flask_login import LoginManager
+from flask_bcrypt import Bcrypt
 
 app = Flask(__name__)
 CORS(app)
@@ -18,3 +19,5 @@ mysql = MySQL(app)
 #initialize login manager
 login_manager = LoginManager(app)
 login_manager.login_view = 'login'
+
+bcrypt = Bcrypt(app)

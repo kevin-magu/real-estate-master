@@ -28,8 +28,10 @@ const handleSubmit = async (e) => {
     if(!response.ok){
       const result = await response.json();
       alert(result.message)
+      
     }else{
       const result = await response.json()
+      localStorage.setItem('token', result.token)
       navigate('/landlord');
     }
 

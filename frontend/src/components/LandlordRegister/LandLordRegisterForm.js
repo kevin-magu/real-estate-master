@@ -109,7 +109,7 @@ function LandLordRegisterForm() {
           </div>
         </div>
         <button type='submit'>Register Landlord</button>
-        <p className='already-have-an-account'>Already have an account? <Link to="/landlordlogin"><p>login here</p></Link></p>
+        <p className='already-have-an-account'>Already have an account? <Link className='login-link' to="/landlordlogin"><p>login here</p></Link></p>
         
       </form>
     </div>

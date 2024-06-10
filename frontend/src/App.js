@@ -6,6 +6,7 @@ import Navbar from './components/Homepage/Navbar';
 import Landlord from './pages/Landlord';
 import LandlordRegister from './pages/LandlordRegister';
 import LandlordLogin from './pages/LandlordLogin';
+import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         
         <Route exact path='/' element={<Home />}/>
         <Route exact path='/landlordlogin' element={<LandlordLogin />} />
-        <Route exact path='/landlord' element={<Landlord />} />
+        <Route exact path='/landlord' element={<ProtectedRoute component={Landlord} />} />
         <Route exact path ='/registerlandlord' element={<LandlordRegister />} />
       </Routes>
     </Router>

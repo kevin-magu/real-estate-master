@@ -1,12 +1,14 @@
 import React from 'react'
 import '../../styles/Assets.css'
 import { Link, useNavigate } from 'react-router-dom'
+import LogoutButton from '../LogoutButton'
 
 function Assets() {
   return (
     
     <div>
         <h3>Landlord Dashboard</h3>
+        <LogoutButton />
         <div className='properties-wrapper'>
         <Link to="" className='properties'>
             <div className='properties-div'>

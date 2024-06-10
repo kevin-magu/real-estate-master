@@ -58,7 +58,14 @@
 }
 .already-have-an-account{
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     bottom: 10px;
     font-size: 14px;
     width: 100%;
+    color: white;
+}
+.login-link{
+    color: white;
 }
